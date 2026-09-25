@@ -20,24 +20,6 @@ Un repositorio pensado para **principiantes en programación**, con lecciones, e
 
 ---
 
-## 📚 Sobre este repositorio
-
-Este repositorio forma parte de una serie de aprendizaje de **Python desde cero**, creada para personas que están comenzando en programación y quieren aprender mediante ejemplos fáciles de entender.
-
-La idea es avanzar progresivamente:
-
-```text
-Concepto
-   ↓
-Ejemplo
-   ↓
-Código
-   ↓
-Práctica
-   ↓
-Programa completo
-```
-
 No necesitas tener experiencia previa para comenzar.
 
 ---
@@ -61,35 +43,6 @@ Durante la serie iremos trabajando diferentes conceptos fundamentales de Python:
 | 🔎 Filter           | Filtrar información utilizando condiciones |
 | ➕ Reduce            | Procesamiento y reducción de datos         |
 | 🖥️ Programas       | Aplicación de los conceptos en proyectos   |
-
----
-
-## 📂 Estructura del repositorio
-
-El contenido está organizado para que cada lección tenga tanto la explicación como una aplicación práctica.
-
-```text
-python-desde-cero/
-│
-├── 📁 lecciones/
-│   ├── 01-introduccion/
-│   ├── 02-variables/
-│   ├── 03-tipos-de-datos/
-│   ├── 04-input/
-│   ├── 05-condicionales/
-│   ├── ...
-│   └── 57-filter/
-│
-├── 📁 programas/
-│   ├── calculadora/
-│   ├── inventario/
-│   ├── sistema-ventas/
-│   └── ...
-│
-└── README.md
-```
-
-Cada carpeta puede contener los archivos utilizados durante la lección y un programa completo para poner en práctica lo aprendido.
 
 ---
 
@@ -118,7 +71,7 @@ py --version
 ### 2. Clonar el repositorio
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone 
 ```
 
 Entra a la carpeta:
@@ -136,20 +89,6 @@ Puedes utilizar cualquier editor de código.
 Una opción recomendada para comenzar es:
 
 [Visual Studio Code](https://code.visualstudio.com/?utm_source=chatgpt.com)
-
----
-
-## 💻 Primer programa
-
-Uno de los primeros conceptos que aprenderás será la entrada de información mediante `input()`.
-
-```python
-nombre = input("¿Cuál es tu nombre? ")
-
-print(f"Hola, {nombre}!")
-```
-
-Aunque parece sencillo, este concepto será utilizado posteriormente para construir programas más completos.
 
 ---
 
@@ -223,25 +162,6 @@ El contenido se irá ampliando progresivamente.
 ```text
 [████████████████░░░░] En desarrollo
 ```
-
-### Contenido
-
-* [x] Fundamentos de Python
-* [x] Variables y tipos de datos
-* [x] Entrada de datos
-* [x] Condicionales
-* [x] Bucles
-* [x] Listas
-* [x] Diccionarios
-* [x] Tuplas
-* [x] Sets
-* [x] Funciones
-* [x] Random
-* [x] Filter
-* [ ] Más estructuras y herramientas
-* [ ] Programas más completos
-* [ ] Proyectos
-
 ---
 
 ## 🌟 ¿Por qué este repositorio?
