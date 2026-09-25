@@ -71,7 +71,7 @@ py --version
 ### 2. Clonar el repositorio
 
 ```bash
-git clone 
+git clone https://github.com/ProyectosCarfa/Python-ParaPrincipiantes.git
 ```
 
 Entra a la carpeta:
@@ -205,7 +205,7 @@ Si este repositorio te está ayudando a aprender Python:
 
 <div align="center">
 
-### 🐍 Aprende Python. Practica. Construye.
+###  Aprende Python. Practica. Construye.
 
 **De cero a crear tus propios programas.**
 
