@@ -92,14 +92,14 @@ Una opción recomendada para comenzar es:
 
 ---
 
-## 🧠 Cómo aprender con este repositorio
+## Cómo aprender con este repositorio
 
 La recomendación es no limitarse a copiar el código.
 
 Utiliza este proceso:
 
 ```text
-👀 Mira la explicación
+<i class="fa-solid fa-face-grin-wide"></i> Mira la explicación
         ↓
 ⌨️ Escribe el código
         ↓
@@ -116,7 +116,7 @@ La práctica constante es parte fundamental del aprendizaje.
 
 ---
 
-## 🛠️ Herramientas
+##  Herramientas
 
 Este proyecto utiliza principalmente:
 
