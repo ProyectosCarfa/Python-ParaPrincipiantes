@@ -1,5 +1,3 @@
-Sí. Para el repositorio queda mejor **sin emojis**, usando símbolos e iconos de texto como `→`, `✓`, `✗`, `│`, `├──`, `└──`, `◆`, `►`, etc.
-
 # Día 49 — `filter()` en Python
 
 > Serie: Python desde 0
