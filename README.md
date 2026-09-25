@@ -51,29 +51,6 @@ Durante la serie iremos trabajando diferentes conceptos fundamentales de Python:
 
 ---
 
-## Estructura del repositorio
-
-El contenido se organiza de forma progresiva para que cada lección pueda estudiarse y practicarse de manera independiente.
-
-```text
-Python-ParaPrincipiantes/
-│
-├── lecciones/
-│   ├── 01/
-│   ├── 02/
-│   ├── 03/
-│   ├── ...
-│   └── 57/
-│
-├── programas/
-│   ├── programa-01/
-│   ├── programa-02/
-│   ├── ...
-│   └── programa-actual/
-│
-└── README.md
-```
-
 Cada lección puede incluir:
 
 ```text
@@ -235,26 +212,6 @@ Contenido desarrollado progresivamente:
 ```text
 ████████████████░░░░  En desarrollo
 ```
-
-### Contenido trabajado
-
-* [x] Fundamentos de Python
-* [x] Variables
-* [x] Tipos de datos
-* [x] Entrada de datos
-* [x] Condicionales
-* [x] Bucles
-* [x] Listas
-* [x] Tuplas
-* [x] Sets
-* [x] Diccionarios
-* [x] Funciones
-* [x] Random
-* [x] Filter
-* [x] Reduce
-* [ ] Más herramientas de Python
-* [ ] Programas más completos
-* [ ] Proyectos
 
 ---
 
