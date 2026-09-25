@@ -1,66 +1,106 @@
-
 <div align="center">
 
 <img src="https://www.python.org/static/community_logos/python-logo-generic.svg" width="180">
 
-# 🐍 Python desde Cero
+# Python desde Cero
 
 ### Aprende Python desde lo más básico hasta construir programas funcionales
 
-Un repositorio pensado para **principiantes en programación**, con lecciones, ejemplos prácticos y programas completos para aprender Python paso a paso.
+Repositorio educativo para **principiantes en programación**, con lecciones, ejemplos prácticos y programas completos para aprender Python paso a paso.
 
 <br>
 
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![Beginner](https://img.shields.io/badge/Nivel-Principiante-4CAF50?style=for-the-badge)
-![GitHub](https://img.shields.io/badge/GitHub-Repositorio-181717?style=for-the-badge\&logo=github\&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge\&logo=python\&logoColor=white)](https://www.python.org/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/ProyectosCarfa/Python-ParaPrincipiantes)
+[![Nivel](https://img.shields.io/badge/Nivel-Principiante-4CAF50?style=for-the-badge)](https://github.com/ProyectosCarfa/Python-ParaPrincipiantes)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 </div>
 
 ---
 
-No necesitas tener experiencia previa para comenzar.
+## Sobre este repositorio
+
+Este repositorio forma parte de una serie dedicada a aprender **Python desde cero**.
+
+Está pensado especialmente para personas que están comenzando a programar y quieren aprender mediante ejemplos claros, código funcional y situaciones prácticas.
+
+No necesitas experiencia previa para comenzar.
 
 ---
 
-## 🐍 ¿Qué aprenderás?
+## Contenido
 
 Durante la serie iremos trabajando diferentes conceptos fundamentales de Python:
 
-| Tema                | Contenido                                  |
-| ------------------- | ------------------------------------------ |
-| 🟢 Fundamentos      | Variables, tipos de datos e impresión      |
-| ⌨️ Entrada de datos | `input()` y conversión de datos            |
-| 🔀 Condicionales    | `if`, `elif`, `else`                       |
-| 🔁 Bucles           | `while`, `for`, `break`                    |
-| 📦 Listas           | Crear, modificar y recorrer listas         |
-| 📖 Tuplas           | Trabajar con datos inmutables              |
-| 🔹 Sets             | Conjuntos y operaciones entre ellos        |
-| 🗂️ Diccionarios    | Estructuras clave-valor                    |
-| ⚙️ Funciones        | Organización y reutilización del código    |
-| 🎲 Random           | Generación de datos aleatorios             |
-| 🔎 Filter           | Filtrar información utilizando condiciones |
-| ➕ Reduce            | Procesamiento y reducción de datos         |
-| 🖥️ Programas       | Aplicación de los conceptos en proyectos   |
+| Tema                                                                        | Contenido                                  |
+| :-------------------------------------------------------------------------- | :----------------------------------------- |
+| ![Python](https://skillicons.dev/icons?i=python\&perline=1) **Fundamentos** | Variables, tipos de datos e impresión      |
+| **Input**                                                                   | Entrada y conversión de datos              |
+| **Condicionales**                                                           | `if`, `elif`, `else`                       |
+| **Bucles**                                                                  | `while`, `for`, `break`                    |
+| **Listas**                                                                  | Crear, modificar y recorrer listas         |
+| **Tuplas**                                                                  | Trabajar con datos inmutables              |
+| **Sets**                                                                    | Conjuntos y operaciones entre ellos        |
+| **Diccionarios**                                                            | Estructuras clave-valor                    |
+| **Funciones**                                                               | Organización y reutilización del código    |
+| **Random**                                                                  | Generación de datos aleatorios             |
+| **Filter**                                                                  | Filtrar información utilizando condiciones |
+| **Reduce**                                                                  | Procesamiento y reducción de datos         |
+| **Programas**                                                               | Aplicación de los conceptos en proyectos   |
 
 ---
 
-## 🚀 Comenzar
+## Estructura del repositorio
+
+El contenido se organiza de forma progresiva para que cada lección pueda estudiarse y practicarse de manera independiente.
+
+```text
+Python-ParaPrincipiantes/
+│
+├── lecciones/
+│   ├── 01/
+│   ├── 02/
+│   ├── 03/
+│   ├── ...
+│   └── 57/
+│
+├── programas/
+│   ├── programa-01/
+│   ├── programa-02/
+│   ├── ...
+│   └── programa-actual/
+│
+└── README.md
+```
+
+Cada lección puede incluir:
+
+```text
+Lección
+├── Guion
+└── Programa
+```
+
+De esta forma puedes estudiar el concepto y posteriormente ejecutarlo en un programa funcional.
+
+---
+
+## Comenzar
 
 ### 1. Instalar Python
 
 Descarga Python desde su página oficial:
 
-[Python.org](https://www.python.org/?utm_source=chatgpt.com)
+[Python.org](https://www.python.org/)
 
-Comprueba que Python esté instalado:
+Después de instalarlo, comprueba que funciona correctamente:
 
 ```bash
 python --version
 ```
 
-o:
+También puedes utilizar:
 
 ```bash
 py --version
@@ -70,14 +110,16 @@ py --version
 
 ### 2. Clonar el repositorio
 
+Puedes clonar este repositorio utilizando Git:
+
 ```bash
 git clone https://github.com/ProyectosCarfa/Python-ParaPrincipiantes.git
 ```
 
-Entra a la carpeta:
+Después entra en la carpeta:
 
 ```bash
-cd python-desde-cero
+cd Python-ParaPrincipiantes
 ```
 
 ---
@@ -86,139 +128,201 @@ cd python-desde-cero
 
 Puedes utilizar cualquier editor de código.
 
-Una opción recomendada para comenzar es:
+Para comenzar se recomienda:
 
-[Visual Studio Code](https://code.visualstudio.com/?utm_source=chatgpt.com)
+[![Visual Studio Code](https://skillicons.dev/icons?i=vscode)](https://code.visualstudio.com/)
+
+**Visual Studio Code**
 
 ---
 
-## Cómo aprender con este repositorio
+## Cómo utilizar este repositorio
 
-La recomendación es no limitarse a copiar el código.
+La idea no es simplemente copiar y pegar el código.
 
-Utiliza este proceso:
+Se recomienda seguir este proceso:
 
 ```text
-<i class="fa-solid fa-face-grin-wide"></i> Mira la explicación
-        ↓
-⌨️ Escribe el código
-        ↓
-▶️ Ejecuta el programa
-        ↓
-🔍 Modifica valores
-        ↓
-🧪 Experimenta
-        ↓
-🚀 Crea tu propia versión
+Leer la explicación
+        │
+        ▼
+Escribir el código
+        │
+        ▼
+Ejecutar el programa
+        │
+        ▼
+Modificar valores
+        │
+        ▼
+Experimentar
+        │
+        ▼
+Crear tu propia versión
 ```
 
-La práctica constante es parte fundamental del aprendizaje.
+Modificar los ejemplos y experimentar con ellos te permitirá comprender mejor cómo funciona cada concepto.
 
 ---
 
-##  Herramientas
-
-Este proyecto utiliza principalmente:
+## Herramientas utilizadas
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=python,vscode,git,github" />
+<a href="https://www.python.org/">
+<img src="https://skillicons.dev/icons?i=python" width="55">
+</a>
+
+<a href="https://code.visualstudio.com/">
+<img src="https://skillicons.dev/icons?i=vscode" width="55">
+</a>
+
+<a href="https://git-scm.com/">
+<img src="https://skillicons.dev/icons?i=git" width="55">
+</a>
+
+<a href="https://github.com/">
+<img src="https://skillicons.dev/icons?i=github" width="55">
+</a>
 
 </p>
 
-* 🐍 **Python** — Lenguaje utilizado durante la serie
-* 💻 **Visual Studio Code** — Editor recomendado
-* 🔀 **Git** — Control de versiones
-* 🐙 **GitHub** — Repositorio y seguimiento del proyecto
+| Herramienta        | Uso                                       |
+| :----------------- | :---------------------------------------- |
+| Python             | Lenguaje principal de la serie            |
+| Visual Studio Code | Editor de código recomendado              |
+| Git                | Control de versiones                      |
+| GitHub             | Almacenamiento y seguimiento del proyecto |
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
-El objetivo de este repositorio es que una persona que nunca ha programado pueda avanzar progresivamente desde:
+El objetivo es que una persona que nunca ha programado pueda avanzar progresivamente desde los conceptos más básicos hasta desarrollar sus propios programas.
 
 ```text
-"¿Qué es una variable?"
-          ↓
-"Ya puedo recibir datos"
-          ↓
-"Ya puedo tomar decisiones"
-          ↓
-"Ya puedo trabajar con listas"
-          ↓
-"Ya puedo procesar información"
-          ↓
-"Ya puedo crear programas"
+¿Qué es una variable?
+          │
+          ▼
+Recibir datos
+          │
+          ▼
+Tomar decisiones
+          │
+          ▼
+Repetir procesos
+          │
+          ▼
+Trabajar con colecciones
+          │
+          ▼
+Procesar información
+          │
+          ▼
+Crear programas
 ```
 
-La meta no es solamente conocer la sintaxis de Python, sino **aprender a pensar y resolver problemas utilizando código**.
+La finalidad no es únicamente aprender la sintaxis de Python, sino comenzar a desarrollar la capacidad de **resolver problemas utilizando programación**.
 
 ---
 
-## 📈 Progreso
+## Progreso
 
-El contenido se irá ampliando progresivamente.
+Contenido desarrollado progresivamente:
+
+![Progress](https://img.shields.io/badge/Progreso-En%20desarrollo-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
 
 ```text
-[████████████████░░░░] En desarrollo
+████████████████░░░░  En desarrollo
 ```
----
 
-## 🌟 ¿Por qué este repositorio?
+### Contenido trabajado
 
-Porque aprender programación no debería consistir únicamente en memorizar código.
-
-Aquí encontrarás:
-
-**📖 Explicación**
-Conceptos explicados desde cero.
-
-**💻 Código**
-Ejemplos que puedes ejecutar y modificar.
-
-**🧪 Práctica**
-Ejercicios y situaciones para experimentar.
-
-**🚀 Programas completos**
-Aplicaciones que combinan los conceptos aprendidos.
-
----
-
-## 🤝 Contribuciones
-
-Si encuentras un error, tienes una sugerencia o quieres aportar una mejora, puedes abrir un **Issue** o realizar un **Pull Request**.
-
-Toda contribución relacionada con el aprendizaje de Python es bienvenida.
+* [x] Fundamentos de Python
+* [x] Variables
+* [x] Tipos de datos
+* [x] Entrada de datos
+* [x] Condicionales
+* [x] Bucles
+* [x] Listas
+* [x] Tuplas
+* [x] Sets
+* [x] Diccionarios
+* [x] Funciones
+* [x] Random
+* [x] Filter
+* [x] Reduce
+* [ ] Más herramientas de Python
+* [ ] Programas más completos
+* [ ] Proyectos
 
 ---
 
-## ⭐ Apoya el proyecto
+## ¿Qué encontrarás aquí?
 
-Si este repositorio te está ayudando a aprender Python:
+### Conceptos
 
-* ⭐ Dale una estrella al repositorio
-* 📢 Compártelo con otros principiantes
-* 💻 Practica los ejemplos
-* 🚀 Construye tus propios proyectos
+Explicaciones progresivas de los fundamentos de Python.
+
+### Código
+
+Ejemplos funcionales que puedes ejecutar directamente.
+
+### Práctica
+
+Situaciones que permiten aplicar lo aprendido.
+
+### Programas
+
+Código completo que combina diferentes conceptos vistos durante la serie.
+
+---
+
+## Contribuciones
+
+Si encuentras un error, tienes una sugerencia o quieres mejorar algún contenido, puedes colaborar mediante:
+
+* **Issues** para reportar problemas o proponer ideas.
+* **Pull Requests** para aportar cambios al proyecto.
+
+Las contribuciones relacionadas con el aprendizaje de Python son bienvenidas.
+
+---
+
+## Apoya el proyecto
+
+Si este repositorio te resulta útil para aprender Python, puedes apoyar el proyecto de diferentes formas:
+
+<p align="center">
+
+<a href="https://github.com/ProyectosCarfa/Python-ParaPrincipiantes">
+<img src="https://img.shields.io/badge/Give%20a%20Star-181717?style=for-the-badge&logo=github&logoColor=white">
+</a>
+
+</p>
+
+Una estrella en GitHub ayuda a que el proyecto pueda llegar a más personas que están comenzando a programar.
 
 ---
 
 <div align="center">
 
-###  Aprende Python. Practica. Construye.
+<img src="https://www.python.org/static/community_logos/python-logo-generic.svg" width="140">
 
-**De cero a crear tus propios programas.**
+## Aprende Python. Practica. Construye.
+
+### De cero a crear tus propios programas.
 
 <br>
 
-![Python](https://img.shields.io/badge/Made%20with-Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+[![Made with Python](https://img.shields.io/badge/Made%20with-Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)](https://www.python.org/)
 
 </div>
 
 ---
 
-### 📌 Nota
+## Nota
 
-Este proyecto es educativo y está orientado a personas que están comenzando a aprender programación con Python.
+Este proyecto tiene fines educativos y está orientado principalmente a personas que están comenzando a aprender programación con Python.
 
-**Python y el logo de Python son marcas de Python Software Foundation. Este proyecto no está afiliado oficialmente con Python Software Foundation.**
+Python y el logo de Python son marcas de Python Software Foundation. Este proyecto no está afiliado oficialmente con Python Software Foundation.
