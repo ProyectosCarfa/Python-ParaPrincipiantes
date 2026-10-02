@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Galería{% endblock %}
+
+{% block content %}
+<section class="section">
+    <h1 class="page-title">📸 Nuestra Galería</h1>
+    <p class="page-subtitle">Explora nuestra colección de imágenes</p>
+
+    <div class="grid-galeria">
+        {% for img in galeria %}
+        <div class="card">
+            <img src="{{ img.url }}" alt="{{ img.titulo }}">
+            <div class="card-body">
+                <h3>{{ img.titulo }}</h3>
+                <p>{{ img.descripcion }}</p>
+                <a href="{{ url_for('detalle_imagen', imagen_id=img.id) }}" class="btn btn-small">Ver más</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

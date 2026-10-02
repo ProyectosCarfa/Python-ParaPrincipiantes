@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Inicio · PythonFunc{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="pulse"></span> Parte 30 · Programación desde cero
+        </div>
+        <h1 class="hero-title">
+            Aprende <span class="hl-blue">def</span> en Python
+        </h1>
+        <p class="hero-sub">
+            La estructura básica de una función, cómo crearla y cómo utilizarla 
+            dentro de un programa para organizar y <span class="hl-amber">reutilizar código</span>.
+        </p>
+        <div class="hero-actions">
+            <a href="{{ url_for('funciones') }}" class="btn btn-primary">
+                <span class="btn-icon">ƒ</span> Empezar con def
+            </a>
+            <a href="{{ url_for('ejemplos') }}" class="btn btn-ghost">
+                <span class="btn-icon">◉</span> Ver ejemplos
+            </a>
+        </div>
+    </div>
+    <div class="hero-code">
+        <div class="code-window neon-border">
+            <div class="code-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="code-title">funciones.py</span>
+            </div>
+            <pre class="code-body"><span class="kw">def</span> <span class="fn">saludar</span>(<span class="param">nombre</span>):
+    <span class="str">"""Saluda a la persona."""</span>
+    <span class="fn">print</span>(<span class="str">f"¡Hola, {nombre}!"</span>)
+
+<span class="fn">saludar</span>(<span class="str">"Mundo"</span>)</pre>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO TIKTOK -->
+<section class="section video-section">
+    <div class="video-header">
+        <span class="page-tag">Video lección</span>
+        <h2 class="section-title">Mira el video completo</h2>
+        <p class="section-subtitle">
+            Parte 30: Estructura básica de <code>def</code> — @carfa_27
+        </p>
+    </div>
+    <div class="video-wrapper neon-border">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@carfa_27/video/7679304506097569044" data-video-id="7679304506097569044" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@carfa_27" href="https://www.tiktok.com/@carfa_27?refer=embed">@carfa_27</a> Parte 30: Si eres principiante y te gusta la programación, hoy aprenderás la estructura básica de def, cómo crear una función y cómo utilizarla dentro de un programa para organizar y reutilizar nuestro código. 🚀🐍 <a title="python" target="_blank" href="https://www.tiktok.com/tag/python?refer=embed">#Python</a> <a title="programacion" target="_blank" href="https://www.tiktok.com/tag/programacion?refer=embed">#Programacion</a> <a title="pythonparaprincipiantes" target="_blank" href="https://www.tiktok.com/tag/pythonparaprincipiantes?refer=embed">#PythonParaPrincipiantes</a> <a title="aprendeprogramación" target="_blank" href="https://www.tiktok.com/tag/aprendeprogramaci%C3%B3n?refer=embed">#aprendeprogramación</a> <a title="pythontips" target="_blank" href="https://www.tiktok.com/tag/pythontips?refer=embed">#PythonTips</a> <a title="coding" target="_blank" href="https://www.tiktok.com/tag/coding?refer=embed">#Coding</a> <a title="carfa27" target="_blank" href="https://www.tiktok.com/tag/carfa27?refer=embed">#carfa27</a> <a target="_blank" title="♬ sonido original  - CARFA" href="https://www.tiktok.com/music/sonido-original-CARFA-7679304576855329557?refer=embed">♬ sonido original  - CARFA</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+    </div>
+</section>
+
+<!-- RUTA DE APRENDIZAJE -->
+<section class="section">
+    <h2 class="section-title">Ruta de aprendizaje</h2>
+    <div class="grid-cards">
+        {% for lec in lecciones %}
+        <a href="{{ url_for(lec.ruta) }}" class="card card-link neon-border">
+            <div class="card-icon-code">{{ lec.icono }}</div>
+            <h3>{{ lec.titulo }}</h3>
+            <p>{{ lec.descripcion }}</p>
+            <span class="card-arrow">→</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- POR QUÉ FUNCIONES -->
+<section class="section">
+    <h2 class="section-title">¿Por qué usar funciones?</h2>
+    <div class="grid-features">
+        <div class="feature neon-border">
+            <div class="feature-num">01</div>
+            <h4>Organización</h4>
+            <p>Divide programas grandes en bloques pequeños y manejables.</p>
+        </div>
+        <div class="feature neon-border">
+            <div class="feature-num">02</div>
+            <h4>Reutilización</h4>
+            <p>Escribe la lógica una vez y llámala cuantas veces necesites.</p>
+        </div>
+        <div class="feature neon-border">
+            <div class="feature-num">03</div>
+            <h4>Mantenimiento</h4>
+            <p>Corrige errores en un solo lugar sin buscar en todo el código.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Ejemplos · PythonFunc{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <span class="page-tag">Laboratorio</span>
+    <h1>Ejemplos prácticos</h1>
+    <p>Funciones listas para copiar, entender y usar en tus programas.</p>
+</div>
+
+<div class="grid-code grid-code-large">
+    {% for ej in ejemplos %}
+    <div class="code-card neon-border">
+        <div class="code-card-header">
+            <span class="code-card-icon">◉</span>
+            <h4>{{ ej.titulo }}</h4>
+        </div>
+        <pre class="code-card-body">{{ ej.codigo }}</pre>
+        <div class="code-card-output">
+            <span class="output-label">Salida:</span>
+            <code>{{ ej.salida }}</code>
+        </div>
+        <p class="code-card-note">{{ ej.explicacion }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<section class="section">
+    <h2 class="section-title">Buenas prácticas</h2>
+    <div class="grid-tips">
+        <div class="tip neon-border">
+            <span class="tip-icon">✓</span>
+            <p>Nombra funciones con <strong>verbos</strong>: calcular_total, mostrar_menu.</p>
+        </div>
+        <div class="tip neon-border">
+            <span class="tip-icon">✓</span>
+            <p>Usa <strong>docstrings</strong> para documentar qué hace cada función.</p>
+        </div>
+        <div class="tip neon-border">
+            <span class="tip-icon">✓</span>
+            <p>Una función debe hacer <strong>una sola cosa</strong> bien.</p>
+        </div>
+        <div class="tip neon-border">
+            <span class="tip-icon">✓</span>
+            <p>Prefiere <strong>return</strong> sobre print para devolver resultados.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

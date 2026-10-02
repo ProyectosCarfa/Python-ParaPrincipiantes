@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}def · PythonFunc{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <span class="page-tag">Concepto 01</span>
+    <h1>Estructura básica de <code>def</code></h1>
+    <p>La palabra reservada que inicia toda función en Python.</p>
+</div>
+
+<section class="anatomy neon-border" id="anatomy">
+    <div class="anatomy-code">
+        <pre class="code-block"><span class="line-num">1</span><span class="tok" data-token="kw">def</span> <span class="tok" data-token="fn">saludar</span><span class="tok" data-token="param">(nombre)</span><span class="tok" data-token="col">:</span>
+<span class="line-num">2</span><span class="tok" data-token="ind">    </span><span class="str">"""Muestra un saludo personalizado."""</span>
+<span class="line-num">3</span><span class="tok" data-token="ind">    </span><span class="fn">print</span>(<span class="str">f"¡Hola, {nombre}!"</span>)
+<span class="line-num">4</span>
+<span class="line-num">5</span><span class="fn">saludar</span>(<span class="str">"Ana"</span>)</pre>
+    </div>
+    <div class="anatomy-legend" id="anatomyLegend">
+        <div class="legend-item" data-token="kw">
+            <span class="legend-badge kw">def</span>
+            <div>
+                <strong>Palabra clave</strong>
+                <p>Indica a Python que estás definiendo una función.</p>
+            </div>
+        </div>
+        <div class="legend-item" data-token="fn">
+            <span class="legend-badge fn">saludar</span>
+            <div>
+                <strong>Nombre de la función</strong>
+                <p>En minúsculas con guiones bajos. Debe describir qué hace.</p>
+            </div>
+        </div>
+        <div class="legend-item" data-token="param">
+            <span class="legend-badge param">(nombre)</span>
+            <div>
+                <strong>Parámetros</strong>
+                <p>Los datos que recibe la función. Van entre paréntesis.</p>
+            </div>
+        </div>
+        <div class="legend-item" data-token="col">
+            <span class="legend-badge col">:</span>
+            <div>
+                <strong>Dos puntos</strong>
+                <p>Marca el inicio del bloque de código que pertenece a la función.</p>
+            </div>
+        </div>
+        <div class="legend-item" data-token="ind">
+            <span class="legend-badge ind">→</span>
+            <div>
+                <strong>Indentación</strong>
+                <p>Las líneas dentro de la función deben estar indentadas (4 espacios).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Ejemplos del concepto</h2>
+    <div class="grid-code">
+        {% for ej in ejemplos %}
+        <div class="code-card neon-border">
+            <div class="code-card-header">
+                <span class="code-card-icon">ƒ</span>
+                <h4>{{ ej.titulo }}</h4>
+            </div>
+            <pre class="code-card-body">{{ ej.codigo }}</pre>
+            <div class="code-card-output">
+                <span class="output-label">Salida:</span>
+                <code>{{ ej.salida }}</code>
+            </div>
+            <p class="code-card-note">{{ ej.explicacion }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const legendItems = document.querySelectorAll('#anatomyLegend .legend-item');
+    const tokens = document.querySelectorAll('#anatomy .tok');
+    
+    legendItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            const tokenType = item.dataset.token;
+            tokens.forEach(t => t.classList.add('dimmed'));
+            tokens.forEach(t => {
+                if (t.dataset.token === tokenType) {
+                    t.classList.remove('dimmed');
+                    t.classList.add('highlighted');
+                }
+            });
+            legendItems.forEach(l => l.classList.remove('active-legend'));
+            item.classList.add('active-legend');
+        });
+        item.addEventListener('mouseleave', () => {
+            tokens.forEach(t => t.classList.remove('dimmed', 'highlighted'));
+            legendItems.forEach(l => l.classList.remove('active-legend'));
+        });
+    });
+});
+</script>
+{% endblock %}

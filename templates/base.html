@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Python Functions{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="{{ url_for('inicio') }}" class="brand">
+                <span class="brand-logo" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.03v-2.867s-.109-3.42 3.35-3.42h5.766s3.24.052 3.24-3.148V3.202S18.28 0 11.913 0zM8.708 1.85c.578 0 1.046.47 1.046 1.052 0 .581-.468 1.051-1.046 1.051-.579 0-1.046-.47-1.046-1.051 0-.582.467-1.052 1.046-1.052z" fill="#3776ab"/>
+                        <path d="M12.087 24c6.092 0 5.712-2.656 5.712-2.656l-.007-2.752h-5.814v-.826h8.123S24 18.211 24 12.031c0-6.18-3.404-5.96-3.404-5.96h-2.03v2.867s.109 3.42-3.35 3.42H9.45s-3.24-.052-3.24 3.148v5.292S5.72 24 12.087 24zm3.205-1.85c-.578 0-1.046-.47-1.046-1.052 0-.581.468-1.051 1.046-1.051.579 0 1.046.47 1.046 1.051 0 .582-.467 1.052-1.046 1.052z" fill="#ffd43b"/>
+                    </svg>
+                </span>
+                <span class="brand-text">Python<span class="accent">Func</span></span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Abrir menú" type="button">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="{{ url_for('inicio') }}" class="{{ 'active' if request.endpoint == 'inicio' }}">
+                        <span class="nav-icon">⌂</span> Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('funciones') }}" class="{{ 'active' if request.endpoint == 'funciones' }}">
+                        <span class="nav-icon">ƒ</span> def
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('parametros') }}" class="{{ 'active' if request.endpoint == 'parametros' }}">
+                        <span class="nav-icon">◈</span> Parámetros
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('ejemplos') }}" class="{{ 'active' if request.endpoint == 'ejemplos' }}">
+                        <span class="nav-icon">◉</span> Ejemplos
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.03v-2.867s-.109-3.42 3.35-3.42h5.766s3.24.052 3.24-3.148V3.202S18.28 0 11.913 0zM8.708 1.85c.578 0 1.046.47 1.046 1.052 0 .581-.468 1.051-1.046 1.051-.579 0-1.046-.47-1.046-1.051 0-.582.467-1.052 1.046-1.052z" fill="#3776ab"/>
+                    <path d="M12.087 24c6.092 0 5.712-2.656 5.712-2.656l-.007-2.752h-5.814v-.826h8.123S24 18.211 24 12.031c0-6.18-3.404-5.96-3.404-5.96h-2.03v2.867s.109 3.42-3.35 3.42H9.45s-3.24-.052-3.24 3.148v5.292S5.72 24 12.087 24zm3.205-1.85c-.578 0-1.046-.47-1.046-1.052 0-.581.468-1.051 1.046-1.051.579 0 1.046.47 1.046 1.051 0 .582-.467 1.052-1.046 1.052z" fill="#ffd43b"/>
+                </svg>
+            </div>
+            <p class="footer-title">
+                Parte 30 · Estructura básica de <code>def</code> en Python
+            </p>
+            <p class="footer-sub">
+                Escribe código una vez, úsalo infinitas veces.
+            </p>
+            <div class="footer-line" aria-hidden="true"></div>
+            <p class="footer-credit">
+                Aprende Python desde cero · Serie de programación para principiantes
+            </p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+        if (toggle && links) {
+            toggle.addEventListener('click', () => {
+                links.classList.toggle('open');
+                toggle.classList.toggle('open');
+            });
+        }
+    });
+    </script>
+</body>
+</html>

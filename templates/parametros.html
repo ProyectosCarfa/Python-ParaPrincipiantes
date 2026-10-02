@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Parámetros · PythonFunc{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <span class="page-tag">Concepto 02</span>
+    <h1>Parámetros y argumentos</h1>
+    <p>Haz que tus funciones reciban datos y devuelvan resultados.</p>
+</div>
+
+<section class="split">
+    <div class="split-text">
+        <h2>Parámetro vs Argumento</h2>
+        <div class="def-box">
+            <div class="def-item neon-border">
+                <span class="def-label param">Parámetro</span>
+                <p>Variable que se declara en la <strong>definición</strong> de la función. Actúa como un marcador de posición.</p>
+            </div>
+            <div class="def-item neon-border">
+                <span class="def-label arg">Argumento</span>
+                <p>Valor real que se <strong>pasa</strong> cuando se llama a la función.</p>
+            </div>
+        </div>
+        <div class="mini-code neon-border">
+            <pre><span class="kw">def</span> <span class="fn">sumar</span>(<span class="param">a</span>, <span class="param">b</span>):  <span class="comment"># a y b son parámetros</span>
+    <span class="kw">return</span> a + b
+
+<span class="fn">sumar</span>(<span class="str">3</span>, <span class="str">5</span>)      <span class="comment"># 3 y 5 son argumentos</span></pre>
+        </div>
+    </div>
+    <div class="split-visual">
+        <div class="visual-box neon-border">
+            <div class="visual-row">
+                <span class="visual-label">Definición</span>
+                <code>def saludar(<span class="param">nombre</span>):</code>
+            </div>
+            <div class="visual-arrow">↓ parámetro ↓</div>
+            <div class="visual-row">
+                <span class="visual-label">Llamada</span>
+                <code>saludar(<span class="arg">"Ana"</span>)</code>
+            </div>
+            <div class="visual-arrow">↓ argumento ↓</div>
+            <div class="visual-row result">
+                <span class="visual-label">Resultado</span>
+                <code>¡Hola, Ana!</code>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Tipos de parámetros</h2>
+    <div class="grid-params">
+        <div class="param-card neon-border">
+            <div class="param-tag">Posicionales</div>
+            <p>El orden importa. El primer argumento va al primer parámetro.</p>
+            <code>def restar(a, b): return a - b<br>restar(10, 3) → 7</code>
+        </div>
+        <div class="param-card neon-border">
+            <div class="param-tag default">Por defecto</div>
+            <p>Valor predefinido si no se envía el argumento.</p>
+            <code>def saludar(n, s="Hola"): ...<br>saludar("Ana") → Hola, Ana!</code>
+        </div>
+        <div class="param-card neon-border">
+            <div class="param-tag kw">Por nombre</div>
+            <p>Se pasan indicando el nombre del parámetro. No importa el orden.</p>
+            <code>saludar(nombre="Ana", saludo="Hey")</code>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Retorno de valores</h2>
+    <div class="grid-code">
+        {% for ej in ejemplos %}
+        <div class="code-card neon-border">
+            <div class="code-card-header">
+                <span class="code-card-icon">◈</span>
+                <h4>{{ ej.titulo }}</h4>
+            </div>
+            <pre class="code-card-body">{{ ej.codigo }}</pre>
+            <div class="code-card-output">
+                <span class="output-label">Salida:</span>
+                <code>{{ ej.salida }}</code>
+            </div>
+            <p class="code-card-note">{{ ej.explicacion }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

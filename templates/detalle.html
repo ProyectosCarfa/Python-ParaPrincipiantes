@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ imagen.titulo }}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <a href="{{ url_for('galeria') }}" class="btn btn-back">← Volver a la galería</a>
+    <div class="detalle">
+        <img src="{{ imagen.url }}" alt="{{ imagen.titulo }}">
+        <div class="detalle-info">
+            <h1>{{ imagen.titulo }}</h1>
+            <p>{{ imagen.descripcion }}</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
